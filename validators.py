@@ -1,6 +1,5 @@
 import re
 
-
 def is_valid_email(email):
     # Check if input is a string
     if not isinstance(email, str):
@@ -10,7 +9,7 @@ def is_valid_email(email):
     if email == "":
         return False
 
-    # Check for whitespace characters (spaces, newlines, tabs, etc.)
+    # Check for whitespace characters
     if any(c.isspace() for c in email):
         return False
 
@@ -69,3 +68,13 @@ def is_valid_email(email):
         return False
 
     return True
+
+
+# Take email from user
+email = input("Enter your email: ")
+
+# Display result
+if is_valid_email(email):
+    print("Valid Email")
+else:
+    print("Invalid Email")
